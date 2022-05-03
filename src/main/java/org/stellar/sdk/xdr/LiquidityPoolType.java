@@ -6,6 +6,10 @@ package org.stellar.sdk.xdr;
 
 import java.io.IOException;
 
+import org.stellar.sdk.responses.LiquidityPoolTypeDeserializer;
+
+import com.google.gson.annotations.JsonAdapter;
+
 
 // === xdr source ============================================================
 
@@ -15,6 +19,7 @@ import java.io.IOException;
 //  };
 
 //  ===========================================================================
+@JsonAdapter(LiquidityPoolTypeDeserializer.class)
 public enum LiquidityPoolType implements XdrElement {
   LIQUIDITY_POOL_CONSTANT_PRODUCT(0),
   ;

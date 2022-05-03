@@ -7,6 +7,7 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
+import com.google.gson.annotations.JsonAdapter;
 
 import org.stellar.sdk.Asset;
 import org.stellar.sdk.LiquidityPoolID;
@@ -17,7 +18,7 @@ import org.stellar.sdk.xdr.OperationType;
 
 import java.lang.reflect.Type;
 
-class OperationDeserializer implements JsonDeserializer<OperationResponse> {
+public class OperationDeserializer implements JsonDeserializer<OperationResponse> {
   private static final OperationType[] AllOperationTypes = OperationType.values();
   @Override
   public OperationResponse deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -1,14 +1,14 @@
 package org.stellar.sdk.responses;
 
-import com.google.common.base.Optional;
-import com.google.gson.annotations.SerializedName;
-
-import org.stellar.sdk.Memo;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.math.BigInteger;
 import java.util.List;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import org.stellar.sdk.Memo;
+
+import com.google.common.base.Optional;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Represents transaction response.

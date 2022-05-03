@@ -1,7 +1,8 @@
 package org.stellar.sdk;
 
-import com.google.common.base.Objects;
-import com.google.common.collect.Lists;
+import java.util.List;
+
+import org.stellar.sdk.responses.PredicateDeserializer;
 import org.stellar.sdk.xdr.ClaimPredicate;
 import org.stellar.sdk.xdr.ClaimPredicateType;
 import org.stellar.sdk.xdr.Duration;
@@ -10,8 +11,11 @@ import org.stellar.sdk.xdr.TimePoint;
 import org.stellar.sdk.xdr.Uint64;
 import org.threeten.bp.Instant;
 
-import java.util.List;
+import com.google.common.base.Objects;
+import com.google.common.collect.Lists;
+import com.google.gson.annotations.JsonAdapter;
 
+@JsonAdapter(PredicateDeserializer.class)
 public abstract class Predicate {
 
   private static List<Predicate> convertXDRPredicates(ClaimPredicate[] predicates) {

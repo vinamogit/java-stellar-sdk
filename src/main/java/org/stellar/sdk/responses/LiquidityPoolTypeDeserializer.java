@@ -1,6 +1,8 @@
 package org.stellar.sdk.responses;
 
 import com.google.gson.*;
+import com.google.gson.annotations.JsonAdapter;
+
 import org.stellar.sdk.xdr.LiquidityPoolType;
 
 import java.lang.reflect.Type;

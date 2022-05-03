@@ -1,15 +1,16 @@
 package org.stellar.sdk.responses;
 
 
-import com.google.common.base.Preconditions;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.reflect.TypeToken;
-
-import org.stellar.sdk.requests.ResponseHandler;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+
+import org.stellar.sdk.requests.ResponseHandler;
+
+import com.google.common.base.Preconditions;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.reflect.TypeToken;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

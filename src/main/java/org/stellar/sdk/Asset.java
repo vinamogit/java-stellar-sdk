@@ -1,9 +1,14 @@
 package org.stellar.sdk;
 
+import org.stellar.sdk.responses.AssetDeserializer;
+
+import com.google.gson.annotations.JsonAdapter;
+
 /**
  * Base Asset class.
  * @see <a href="https://developers.stellar.org/docs/glossary/assets/" target="_blank">Assets</a>
  */
+@JsonAdapter(AssetDeserializer.class)
 public abstract class Asset implements Comparable<Asset> {
   Asset() {}
 

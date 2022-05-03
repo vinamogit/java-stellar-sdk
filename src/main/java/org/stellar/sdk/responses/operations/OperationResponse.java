@@ -1,6 +1,7 @@
 package org.stellar.sdk.responses.operations;
 
 import com.google.common.base.Optional;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 
 import org.stellar.sdk.responses.*;
@@ -13,6 +14,7 @@ import java.math.BigInteger;
  * @see org.stellar.sdk.requests.OperationsRequestBuilder
  * @see org.stellar.sdk.Server#operations()
  */
+@JsonAdapter(OperationDeserializer.class)
 public abstract class OperationResponse extends Response implements Pageable {
   @SerializedName("id")
   private Long id;

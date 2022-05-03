@@ -2,6 +2,8 @@ package org.stellar.sdk.responses;
 
 import com.google.common.collect.Lists;
 import com.google.gson.*;
+import com.google.gson.annotations.JsonAdapter;
+
 import org.stellar.sdk.Predicate;
 import org.stellar.sdk.xdr.Duration;
 import org.stellar.sdk.xdr.Int64;

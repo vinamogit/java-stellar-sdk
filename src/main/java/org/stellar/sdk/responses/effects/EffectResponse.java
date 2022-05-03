@@ -1,13 +1,16 @@
 package org.stellar.sdk.responses.effects;
 
-import com.google.common.base.Optional;
-import com.google.gson.annotations.SerializedName;
+import java.math.BigInteger;
+
+import org.stellar.sdk.responses.EffectDeserializer;
 import org.stellar.sdk.responses.Link;
 import org.stellar.sdk.responses.MuxedAccount;
 import org.stellar.sdk.responses.Pageable;
 import org.stellar.sdk.responses.Response;
 
-import java.math.BigInteger;
+import com.google.common.base.Optional;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Abstract class for effect responses.
@@ -15,6 +18,7 @@ import java.math.BigInteger;
  * @see org.stellar.sdk.requests.EffectsRequestBuilder
  * @see org.stellar.sdk.Server#effects()
  */
+@JsonAdapter(EffectDeserializer.class)
 public abstract class EffectResponse extends Response implements Pageable {
   @SerializedName("id")
   private String id;

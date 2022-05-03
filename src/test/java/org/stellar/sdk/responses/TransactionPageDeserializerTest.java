@@ -14,6 +14,7 @@ public class TransactionPageDeserializerTest extends TestCase {
 
     assertEquals(transactionsPage.getRecords().get(0).getSourceAccount(), "GAAZI4TCR3TY5OJHCTJC2A4QSY6CJWJH5IAJTGKIN2ER7LBNVKOCCWN7");
     assertEquals(transactionsPage.getRecords().get(0).getPagingToken(), "12884905984");
+    System.out.println(transactionsPage.getRecords().get(0));
     assertTrue(transactionsPage.getRecords().get(0).getMemo() instanceof MemoText);
     MemoText memoText = (MemoText) transactionsPage.getRecords().get(0).getMemo();
     assertEquals(memoText.getText(), "hello world");

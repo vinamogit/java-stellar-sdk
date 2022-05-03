@@ -1,15 +1,20 @@
 package org.stellar.sdk;
 
-import com.google.common.base.Objects;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.stellar.sdk.xdr.*;
+import org.stellar.sdk.responses.LiquidityPoolIDDeserializer;
+import org.stellar.sdk.xdr.LiquidityPoolType;
+import org.stellar.sdk.xdr.XdrDataOutputStream;
+
+import com.google.common.base.Objects;
+import com.google.gson.annotations.JsonAdapter;
 
 /**
  * Base LiquidityPoolID class.
  * @see <a href="https://developers.stellar.org/docs/glossary/liquidity-pool/" target="_blank">Liquidity Pool</a>
  */
+@JsonAdapter(LiquidityPoolIDDeserializer.class)
 public final class LiquidityPoolID {
   protected final byte[] hash;
 

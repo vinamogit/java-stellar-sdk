@@ -2,6 +2,7 @@ package org.stellar.sdk.responses;
 
 import com.google.common.io.BaseEncoding;
 import com.google.gson.*;
+import com.google.gson.annotations.JsonAdapter;
 
 import org.stellar.sdk.Memo;
 import org.stellar.sdk.xdr.TransactionEnvelope;

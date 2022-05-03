@@ -1,17 +1,18 @@
 package org.stellar.sdk.responses;
 
+import static com.google.common.base.Optional.fromNullable;
+
+import java.lang.reflect.Type;
+
+import org.stellar.sdk.Asset;
+
 import com.google.common.base.Function;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
-import org.stellar.sdk.Asset;
 
-import java.lang.reflect.Type;
-
-import static com.google.common.base.Optional.fromNullable;
-
-class AssetDeserializer implements JsonDeserializer<Asset> {
+public class AssetDeserializer implements JsonDeserializer<Asset> {
   @Override
   public Asset deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
     if (!json.isJsonObject()) {
